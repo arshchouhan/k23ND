@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container
+        {
+            background-color: aqua;
+            border: solid black 4px;
+            padding: 30px;
+
+            display:grid;
+        /*  two equal columns*/
+            /* grid-template-columns: auto auto 50%; */
+            /* grid-template-columns: 20% auto 50%; */
+
+            /* grid-template rows helps to change height of diff rows 
+            auto is default for rows*/
+
+            /* grid-template-rows: 150px 100px 50px; */
+
+
+            grid-template: 100px 300px 100px/auto 20% 50%;
+            /* grid-row-gap:10px ;
+            grid-column-gap: 20px; */
+
+            grid-gap: 10px 20px;
+        
+
+        }
+
+        .item{
+            border: black solid 2px;
+            padding:20px;
+            background-color:aquamarine;
+
+        }
+
+        #b{
+            /* grid-row-start: 2;
+            grid-row-end: span 2; */
+
+            grid-row: 2/span 2;
+        }
+        #g
+        {
+            grid-column-start: 2;
+            grid-column-end: span 3;
+        }
+        #i
+        {
+            grid-area: 3/5/span 1/span2; 
+            /* row start,col start,row span,col span */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">item1</div>
+        <div class="item" id="b">item2</div>
+        <div class="item">item3</div>
+        <div class="item">item4</div>
+        <div class="item">item5</div>
+        <div class="item">item6</div>
+        <div class="item" id="g">item7</div>
+        <div class="item" id="h">item8</div>
+        <div class="item" id="i">item9</div>
+    </div>
+</body>
+</html>
